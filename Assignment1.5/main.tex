@@ -75,29 +75,43 @@ Given,\\
 
 By angle sum property,
 \begin{align}
-    \angle{A}+\angle{B}+\angle{C}&=180\degree\\
-    \angle{C}&=180\degree-\brak{45\degree+105\degree}\\
-    \angle{C}&=30\degree\label{3-3.3-8-3}
+    \angle{A}+\angle{B}+\angle{C}&=\pi\\
+    \angle{C}&=\pi-\brak{\frac{\pi}{4}+\frac{7\pi}{12}}\\
+    \angle{C}&=\frac{\pi}{6}\label{3-3.3-8-1}
+\end{align}
+Using projection rule,
+\begin{align}
+    a&=b \cos C+c \cos B\\
+    b\cos C+c\cos B-a&=0\label{3-3.3-8-2}
 \end{align}
 Using Sine formula, in $\triangle ABC$,
 \begin{align}
     \frac{a}{sin A}=\frac{b}{sin B}=\frac{c}{sin C}
 \end{align}
  \begin{align}
-    b&=\frac{sin B}{sin A}a\\
-    b&=\frac{sin \frac{\pi}{4}}{sin \frac{7\pi}{12}}7cm\\
-    b&=\frac{14}{\sqrt{3}+1}\label{3-3.3-8-4}\\
-    c&=\frac{sin C}{sin A}a\\
-    c&=\frac{sin \frac{\pi}{6}}{sin \frac{7\pi}{12}}7cm\\
-    c&=\frac{14}{\sqrt{2}\brak{\sqrt{3}+1}}\label{3-3.3-8-5}
+    b\sin C&= c\sin B\\
+    b\sin C - c\sin B &=0\label{3-3.3-8-3}
 \end{align}
- From equations \eqref{3-3.3-8-4}, \eqref{3-3.3-8-5} and  
- \eqref{eq:9/11/2/1},
+ Solving equations \eqref{3-3.3-8-2}and \eqref{3-3.3-8-3},
 \begin{align}
-\vec{A}&=c\myvec{cos B\\ sin B}=\frac{14}{\sqrt{2}\brak{\sqrt{3}+1}}\myvec{cos \frac{\pi}{4}\\ sin \frac{\pi}{4}}\\
+\myvec{\cos C && \cos B\\ \sin C && -\sin B}\myvec{b \\ c}=\myvec{a \\ 0}\\
+\myvec{\cos \frac{\pi}{6} && \cos \frac{\pi}{4}\\ \sin \frac{\pi}{6} && -\sin\frac{\pi}{4}}\myvec{b \\ c}=\myvec{7 \\ 0}\\
+\myvec{\frac{\sqrt{3}}{2} && \frac{1}{\sqrt{2}}\\ \frac{1}{2} && -\frac{1}{\sqrt{2}}}\myvec{b \\ c}=\myvec{7 \\ 0}
+\end{align}
+Solving for $b$ and $c$,
+\begin{align}
+    \myvec{\frac{\sqrt{3}}{2} && \frac{1}{\sqrt{2}} && 7 \\ \frac{1}{2} && -\frac{1}{\sqrt{2}} && 0}\xrightarrow{R1=R1+R2}\myvec{\frac{\sqrt{3}+1}{2} && 0 && 7 \\ \frac{1}{2} && -\frac{1}{\sqrt{2}} && 0}\xrightarrow{R2=\frac{R1}{\sqrt{3}+1}-R2}\\\myvec{\frac{\sqrt{3}+1}{2} && 0 && 7 \\ 0 && \frac{1}{\sqrt{2}} && \frac{7}{\sqrt{3}+1}}\xrightarrow{R1=\frac{2}{\sqrt{3}+1}R1, R2=\sqrt{2}R2}\myvec{1 && 0 && \frac{14}{\sqrt{3}+1} \\ 0 && 1 && \frac{7\sqrt{2}}{\sqrt{3}+1}}
+\end{align}
+\begin{align}
+    b&=\frac{14}{\sqrt{3}+1}\\
+    c&=\frac{7\sqrt{2}}{\sqrt{3}+1}
+\end{align}
+ From \eqref{eq:9/11/2/1},
+ \begin{align}
+ \vec{A}&=c\myvec{\cos B\\ \sin B}=\myvec{\frac{7}{\sqrt{3}+1} \\ \frac{7}{\sqrt{3}+1}}\\
 \vec{B}&=0\\
 \vec{C}&=\myvec{a \\ 0}=\myvec{7\\0}
-\end{align}
+ \end{align}
 \begin{figure}[h!]
    \centering
    \includegraphics[width=1.1\columnwidth]{Figs/Figure_1.png}
